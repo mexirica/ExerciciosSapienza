@@ -27,3 +27,20 @@ lst = [1, 2, 2013, 23, 9, 2011, 10, 11, 2000]
 groupd(lst)
 lst
 ['1/2/2013', '23/9/2011', '10/11/2000']'''
+
+def occ(lst, v):
+    lista=[]
+    for idx,n in enumerate(lst):
+        if v == n:
+            lista.append(idx)
+    return lista
+
+def rep(lst, k):
+    ret=[]
+
+    for n in lst:
+        if lst.count(n)>= k:
+            ret.append(n)
+            lst=list(filter(lambda x: (x!=n), lst))
+    ret.sort()
+    return ret
