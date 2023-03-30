@@ -31,27 +31,28 @@ def prec(g1, m1, a1, g2, m2, a2):
 def l2d(lst):
     ret=[]
     for n in lst:
-        if n == "zero":
-            ret.append(0)
-        elif n== "uno":
-            ret.append(1)
-        elif n=="due":
-            ret.append(2)
-        elif n=="tre":
-            ret.append(3)
-        elif n=="quattro":
-            ret.append(4)
-        elif n=="cinque":
-            ret.append(5)
-        elif n=="sei":
-            ret.append(6)
-        elif n=="sette":
-            ret.append(7)
-        elif n=="otto":
-            ret.append(8)
-        elif n=="nove":
-            ret.append(9)
-    return ret
+        match n:
+            case "zero":
+                ret.append(0)
+            case "uno":
+                ret.append(1)
+            case "due":
+                ret.append(2)
+            case "tre":
+                ret.append(3)
+            case "quattro":
+                ret.append(4)
+            case "cinque":
+                ret.append(5)
+            case "sei":
+                ret.append(6)
+            case "sette":
+                ret.append(7)
+            case "otto":
+                ret.append(8)
+            case "nove":
+                ret.append(9)
+    print(ret)
 
 def distinct(lst):
     for n in lst:

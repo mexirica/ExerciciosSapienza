@@ -35,4 +35,5 @@ def crossing_over(m, f):
    x.sort()
    return x
 
-crossing_over([1,3,4],[2,5])
+
+

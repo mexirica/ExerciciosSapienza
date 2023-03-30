@@ -44,3 +44,34 @@ def rep(lst, k):
             lst=list(filter(lambda x: (x!=n), lst))
     ret.sort()
     return ret
+
+def lastfirst(lst):
+    if len(lst) < 2:
+        return None
+    last_char = lst[0][-1]
+    for word in lst[1:]:
+        if word[0] != last_char:
+            return word
+        last_char = word[-1]
+    return None
+
+
+
+
+def groupd(lst):
+    itens=[]
+    datas=''
+    i=2
+    for idx,value in enumerate(lst):
+        if idx % 3 != 0 and idx != i or idx == 0:
+            datas += str(value)+"/"
+        elif idx % 3 == 0:
+            datas += str(value)+"/"
+        else:
+            datas += str(value)
+            itens.append(datas)
+            datas = ''
+            i+=3
+    print(itens)
+
+groupd([1, 2, 2013, 23, 9, 2011, 10, 11, 2000,11,12,2020])
