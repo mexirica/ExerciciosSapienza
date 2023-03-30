@@ -38,10 +38,6 @@ def countw(t, w):
         if w==n:
             i+=1
     return i
-t = '''Quant’è bella giovinezza
-che si fugge tuttavia!
-Chi vuol esser lieto, sia:
-del doman non c’è certezza.'''
 
 def firstline(t, s):
     t=t.split('\n')
